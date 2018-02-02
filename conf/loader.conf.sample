@@ -5,10 +5,10 @@
 # Custom mfsbsd variables
 #
 # Set all auto-detected interfaces to DHCP
-#mfsbsd.autodhcp="YES"
+mfsbsd.autodhcp="YES"
 #
 # Define a new root password
-#mfsbsd.rootpw="foobar"
+mfsbsd.rootpw="foobar"
 #
 # Alternatively define a root password hash like in master.passwd
 # NOTICE: replace '$' characters with '%'
@@ -18,7 +18,7 @@
 #mfsbsd.nameservers="192.168.1.1 192.168.1.2"
 #
 # Change system hostname
-#mfsbsd.hostname="mfsbsd"
+mfsbsd.hostname="mfsbsd"
 #
 # List of interfaces to be set
 #mfsbsd.interfaces="em0 em1"
@@ -46,9 +46,19 @@
 #
 # Do not change anything here until you know what you are doing
 #
+
 mfs_load="YES"
 mfs_type="mfs_root"
 mfs_name="/mfsroot"
 ahci_load="YES"
 vfs.root.mountfrom="ufs:/dev/md0"
 mfsbsd.autodhcp="YES"
+
+comconsole_speed="115200"
+console="comconsole,vidconsole"
+boot_multicons="YES"
+boot_serial="YES"
+
+mmc_load="YES"
+mmcsd_load="YES"
+sdchi_load="YES"

@@ -35,7 +35,7 @@ PACKAGESDIR?=packages
 CUSTOMFILESDIR=customfiles
 TOOLSDIR=tools
 PRUNELIST?=${TOOLSDIR}/prunelist
-PKG_STATIC?=${TOOLSDIR}/pkg-static
+PKG_STATIC?=/usr/local/sbin/pkg-static
 #
 # Program defaults
 #
@@ -74,9 +74,9 @@ BSDLABEL=bsdlabel
 #
 DOFS=${TOOLSDIR}/doFS.sh
 SCRIPTS=mdinit mfsbsd interfaces packages
-BOOTMODULES=acpi ahci
+BOOTMODULES=acpi ahci sdhci
 MFSMODULES=aesni crypto cryptodev ext2fs geom_eli geom_mirror geom_nop ipmi \
-	ntfs nullfs opensolaris smbus snp tmpfs zfs
+	ntfs nullfs opensolaris smbus snp tmpfs zfs mmc mmcsd
 #
 XZ_FLAGS=
 #
